@@ -15,7 +15,7 @@ find_package(rclcpp REQUIRED)
 add_executable(pose_cov_ops_example_node src/pose_cov_ops_example.cpp)
 
 # Link the pose_cov_ops library
-ament_target_dependencies(pose_cov_ops_example_node rclcpp pose_cov_ops)
+target_link_libraries(pose_cov_ops_example_node rclcpp::rclcpp pose_cov_ops::pose_cov_ops)
 
 # Install the executable
 install(TARGETS
